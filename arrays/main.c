@@ -5,6 +5,7 @@ int main(void){
 	arr = createArray(&size);
 	printArray(arr, size);
 	//maxMinEle(arr, size);
+	secMinMax(arr, size);
 	//countEvenOdd(arr, size);
 	//insertEle(&arr,&size,3,0);
 	//printArray(arr, size);
@@ -20,8 +21,8 @@ int main(void){
 	//rotateleft(arr, size, 4);
 	//rotateright(arr, size, 2);
 	//printArray(arr, size);
-	removeDupli(&arr, &size);
-	printArray(arr, size);
+	//removeDupli(&arr, &size);
+	//printArray(arr, size);
 	free(arr);
 	return 1;
 }

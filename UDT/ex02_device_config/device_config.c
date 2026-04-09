@@ -27,6 +27,7 @@ void menu(){
          printf("-----------------------------------------\n");
 }
 void modify_field(DeviceConfig config){
+	printf("addr2 = %u\n", &config);
 	uint16_t choice;
 	printf("Which field do you want to modify?\n");
 	scanf("%hd", &choice);
@@ -34,6 +35,7 @@ void modify_field(DeviceConfig config){
 		case 0:
 			printf("Enter new device name: ");
 			scanf("%s", config.deviceName);
+			printf("%s", config.deviceName);
 			break;
 		case 1:
 			printf("Enter mode: ");
@@ -56,6 +58,7 @@ void modify_field(DeviceConfig config){
 }
 
 void printConfig(DeviceConfig config){
+	printf("addr3 = %u\n", &config);
 	printf("-----------------Current Configurations-------------------- \n");
 	printf("Device name: %s \n",config.deviceName);
 	printf("Mode: %d\n", config.mode);
@@ -65,11 +68,13 @@ void printConfig(DeviceConfig config){
 }
 int main(){
 	int repeat = true;
-	DeviceConfig config;
+	DeviceConfig config = {0};
+	printf("addr1 = %u\n", &config);
 	config.flag=0;
 	menu();
 	while(repeat){
-		modify_field(config);
+		modify_field(&config);
+		printf("Device name: %s \n",config.deviceName);
 		printConfig(config);
 		printf("Want to continue?(1/0): ");
 		scanf("%d",&repeat);

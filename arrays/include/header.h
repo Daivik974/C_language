@@ -9,6 +9,7 @@
 int32_t* createArray(int16_t *size);
 void printArray(int32_t* arr, int16_t size);
 void maxMinEle(int32_t arr[], int16_t arrLen);
+void secMinMax(int32_t arr[], int16_t arrLen);
 void countEvenOdd(int32_t arr[], int16_t arrLen);
 int32_t uniqueEle(int32_t arr[], int16_t arrLen);
 void insertEle(int32_t **arr,int16_t *arrLen,int16_t position, int32_t value);
